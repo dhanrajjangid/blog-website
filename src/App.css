@@ -56,6 +56,7 @@ a{
   border-radius: 15px;
 }
 
+
 .post .postHeader{
   display: flex;
   justify-content: center;
@@ -148,6 +149,12 @@ a{
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 992px) {
+  .cpContainer {
+    width: 90%;
+  }
 }
 
 .cpContainer h1{
