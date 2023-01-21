@@ -9,6 +9,7 @@ import {
 import Home from "./pages/Home";
 import CreatePost from './pages/CreatePost';
 import Login from "./pages/Login";
+import Register from "./pages/Register"
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
 
@@ -28,19 +29,27 @@ function App() {
     <Router>
       <nav>
         <Link to="/">Home</Link>
+        
         {!isAuth ? (
-        <Link to="/login">Login</Link>
+        <>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+        </>
          ) : ( 
           <>
             <Link to="/createpost">Create Post</Link>
+            
             <button className="logOutButton" onClick={signUserOut}>Log Out</button>
           </>
         )}
+        
       </nav>
       <Routes>
         <Route path='/' element={<Home isAuth={ isAuth }/>}/>
         <Route path='/createpost' element={<CreatePost isAuth={ isAuth }/>}/>
         <Route path='/login' element={<Login setIsAuth={ setIsAuth }/>} />
+        <Route path='/register' element={<Register setIsAuth={ setIsAuth }/>} />
+
       </Routes>
     </Router>
   );

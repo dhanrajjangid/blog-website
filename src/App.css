@@ -79,10 +79,47 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   align-items: center;
+  height: 100vh;
+}
+
+.emailLogin{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(27, 27, 27);
+  color: white;
+  padding: 20px 60px;
+  gap: 15px;
+  align-items: center;
+}
+
+.emailLogin form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title{
   font-size: 20px;
-  height: 50vh;
+}
+
+.emailLogin input{
+  padding: 15px;
+  outline: none;
+  border: none;
+}
+
+.emailLogin button{
+  background-color: #5A594B;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+}
+
+.googleLoginSection{
+  text-align: center;
 }
 
 .google-login{
